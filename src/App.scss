@@ -1,0 +1,93 @@
+@import "./utils/fonts.scss";
+@import "./utils/colors.scss";
+
+.bold {
+    font-family: "Helvetica Bold", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.button {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+input::-webkit-input-placeholder { color: $placeholder-color; }
+input:-ms-input-placeholder { color: $placeholder-color; }
+input::-ms-input-placeholder { color: $placeholder-color; }
+input::placeholder { color: $placeholder-color; }
+
+.uploader {
+    font-family: "Helvetica", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    max-width: 537px;
+    margin: auto;
+    &__label {
+        display: block;
+        margin-bottom: 8px;
+        color: $placeholder-color;
+        .bold {
+            color: $font-color;
+            display: inline-block;
+            margin-right: 12px;
+        }
+    }
+    &__group {
+        padding: 8px;
+        border: 1px dashed $border-color;
+        border-radius: 6px;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        margin-top: 12px;
+        list-style-type: none;
+
+        &-item {
+            background-color: $background;
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: $font-color;
+            margin-bottom: 4px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    } 
+}
+
+@media(max-width: 576px) {
+    .uploader {
+        &__label {
+            span {
+                display: block;
+            }
+        }
+        &__group {
+            padding: 8px;
+        }
+        &__input-group {
+            padding-left: 8px;
+            padding-right: 8px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__input-text {
+            border-left: none;
+            border-top: 1px solid $border-color;
+            width: 100%;
+            padding: 16px 35px 8px 0;
+        }
+        &__label-file {
+            width: 100%;
+            padding-left: 0;
+        }
+        &__button-add {
+            top: 54px;
+            right: 8px;
+        }
+    }
+}
