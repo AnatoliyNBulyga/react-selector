@@ -11,7 +11,7 @@
     }
     &__label-file {
         display: flex;
-        min-width: 165px;
+        min-width: 172px;
         color: $accent-color;
         cursor: pointer;
         padding: 8px;
@@ -35,14 +35,40 @@
     }
     &__button-add {
         position: absolute;
-        top: 8px;
-        right: 0px;
+        top: 6px;
+        right: 6px;
         z-index: 2;
         padding: 0;
         svg {
             fill: $add-color;
             width: 20px;
             height: 20px;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .uploader {
+        &__form {
+            padding-left: 8px;
+            padding-right: 8px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__input-text {
+            border-left: none;
+            border-top: 1px solid $border-color;
+            width: 100%;
+            padding: 18px 35px 8px 0;
+        }
+        &__label-file {
+            width: 100%;
+            padding-left: 0;
+            padding-bottom: 13px;
+        }
+        &__button-add {
+            top: 56px;
+            right: 7px;
         }
     }
 }

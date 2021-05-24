@@ -6,3 +6,6 @@ export interface IFile {
     name: string,
     lastModified: number
 }
+export type ContextType = {
+    removeItem: (id: number) => void
+}
